@@ -1,0 +1,12 @@
+{
+  "error": null,
+  "vehicle": {
+    "carId": "174397123",
+    "title": "현대 아반떼 CN7 1.6 가솔린 스마트",
+    "price": 1890,
+    "url": "https://www.encar.com/dc/dc_cardetailview.do?carid=174397123",
+    "year": 2022,
+    "sourceType": "DETAIL",
+    "extractError": null
+  }
+}

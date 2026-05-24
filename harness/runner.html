@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- Harness Runner: Chrome에서 file:// 로 열어서 실행 -->
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>Encar Price Tracker - Harness Runner</title>
+  <style>
+    body { font-family: monospace; padding: 16px; background: #1e1e1e; color: #d4d4d4; }
+    h1 { color: #569cd6; font-size: 16px; }
+    .suite { margin: 12px 0; }
+    .suite-name { color: #9cdcfe; font-weight: bold; font-size: 13px; margin-bottom: 4px; }
+    .pass { color: #6a9955; }
+    .fail { color: #f44747; }
+    .skip { color: #808080; }
+    .summary { margin-top: 16px; font-size: 14px; border-top: 1px solid #333; padding-top: 8px; }
+    pre { background: #252526; padding: 8px; border-radius: 4px; font-size: 11px; overflow: auto; }
+  </style>
+</head>
+<body>
+  <h1>Encar Price Tracker — Harness Runner</h1>
+  <div id="output"></div>
+
+  <!-- deps -->
+  <script src="../utils/constants.js"></script>
+  <script src="../utils/pageDetector.js"></script>
+  <script src="../utils/price.js"></script>
+  <script src="../utils/ga-config.js"></script>
+  <script src="../utils/gaRepository.js"></script>
+  <script src="../utils/priceParser.js"></script>
+  <script src="../utils/merge.js"></script>
+  <script src="../utils/extractor.js"></script>
+  <script src="../utils/storage.js"></script>
+  <script src="../extractor/listExtractor.js"></script>
+  <script src="../extractor/detailExtractor.js"></script>
+  <script src="../utils/status.js"></script>
+  <script src="../utils/overlay.js"></script>
+  <script src="../storage/storageManager.js"></script>
+  <script src="../ui/todayPricePanel.js"></script>
+
+  <!-- harness suites -->
+  <script src="harness-framework.js"></script>
+  <script src="extractor.harness.js"></script>
+  <script src="ga.harness.js"></script>
+  <script src="history.harness.js"></script>
+  <script src="status.harness.js"></script>
+  <script src="ui.harness.js"></script>
+  <script src="priceTracking.harness.js"></script>
+
+  <script>
+    // 모든 suite 실행 후 결과 렌더링
+    window.addEventListener('load', () => {
+      HarnessRunner.run(document.getElementById('output')).catch(e => {
+        document.getElementById('output').innerHTML = `<div class="fail">${e.message}</div>`;
+      });
+    });
+  </script>
+</body>
+</html>

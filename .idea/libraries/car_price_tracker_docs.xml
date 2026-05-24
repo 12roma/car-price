@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="car-price-tracker-docs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/car-price-tracker-docs.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

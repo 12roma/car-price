@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- Encar LIST page minimal fixture
+     Captured: synthetic fixture based on known DOM structure
+     TODO: 실제 Encar 페이지 캡처로 교체 후 expected JSON 업데이트 -->
+<html lang="ko">
+<body>
+  <div id="car_list_area">
+    <ul class="car_list">
+      <li>
+        <div class="img">
+          <a class="lst_imgbx" href="/dc/dc_cardetailview.do?carid=174397123">
+            <img alt="아반떼" />
+          </a>
+        </div>
+        <div class="info">
+          <strong class="subject">2022년식 현대 아반떼 CN7 1.6 가솔린 스마트</strong>
+          <ul class="spec">
+            <li>22/01</li>
+            <li>12,234km</li>
+            <li>가솔린</li>
+            <li>자동</li>
+          </ul>
+          <div class="price_area">
+            <strong>1,890</strong><span>만원</span>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="img">
+          <a class="lst_imgbx" href="/dc/dc_cardetailview.do?carid=183201456">
+            <img alt="소나타" />
+          </a>
+        </div>
+        <div class="info">
+          <strong class="subject">2021년식 현대 소나타 DN8 2.0 가솔린 스마트</strong>
+          <ul class="spec">
+            <li>21/03</li>
+            <li>30,100km</li>
+            <li>가솔린</li>
+            <li>자동</li>
+          </ul>
+          <div class="price_area">
+            <strong>2,350</strong><span>만원</span>
+          </div>
+        </div>
+      </li>
+      <li>
+        <!-- 가격 없는 카드 (PARTIAL_DATA 케이스) -->
+        <div class="img">
+          <a class="lst_imgbx" href="/dc/dc_cardetailview.do?carid=190000001">
+            <img alt="K5" />
+          </a>
+        </div>
+        <div class="info">
+          <strong class="subject">2023년식 기아 K5 DL3 1.6T 가솔린 프레스티지</strong>
+          <ul class="spec">
+            <li>23/06</li>
+            <li>5,000km</li>
+          </ul>
+          <!-- price_area 없음 -->
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

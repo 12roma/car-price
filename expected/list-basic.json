@@ -1,0 +1,29 @@
+{
+  "error": null,
+  "vehicles": [
+    {
+      "carId": "174397123",
+      "title": "2022년식 현대 아반떼 CN7 1.6 가솔린 스마트",
+      "price": 1890,
+      "url": "https://www.encar.com/dc/dc_cardetailview.do?carid=174397123",
+      "sourceType": "LIST",
+      "extractError": null
+    },
+    {
+      "carId": "183201456",
+      "title": "2021년식 현대 소나타 DN8 2.0 가솔린 스마트",
+      "price": 2350,
+      "url": "https://www.encar.com/dc/dc_cardetailview.do?carid=183201456",
+      "sourceType": "LIST",
+      "extractError": null
+    },
+    {
+      "carId": "190000001",
+      "title": "2023년식 기아 K5 DL3 1.6T 가솔린 프레스티지",
+      "price": null,
+      "url": "https://www.encar.com/dc/dc_cardetailview.do?carid=190000001",
+      "sourceType": "LIST",
+      "extractError": "NO_PRICE"
+    }
+  ]
+}

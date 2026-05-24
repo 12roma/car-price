@@ -1,0 +1,59 @@
+{
+  "manifest_version": 3,
+  "name": "Encar 가격 추적기",
+  "version": "1.0.1",
+  "description": "엔카 방문 차량의 가격 이력을 로컬에 저장하고 변동을 시각적으로 표시합니다.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.encar.com/*",
+    "https://fem.encar.com/*",
+    "https://www.google-analytics.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.encar.com/*",
+        "https://fem.encar.com/*"
+      ],
+      "css": ["styles.css"],
+      "js": [
+        "utils/constants.js",
+        "utils/price.js",
+        "utils/ga-config.js",
+        "utils/gaRepository.js",
+        "utils/merge.js",
+        "utils/status.js",
+        "utils/overlay.js",
+        "utils/pageDetector.js",
+        "utils/extractor.js",
+        "utils/storage.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://www.encar.com/dc/dc_carsearchlist.do*",
+        "https://www.encar.com/dc/dc_cardetailview.do*",
+        "https://www.encar.com/cars/detail/*"
+      ],
+      "js": [
+        "utils/priceParser.js",
+        "extractor/listExtractor.js",
+        "extractor/detailExtractor.js",
+        "storage/storageManager.js",
+        "ui/todayPricePanel.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Encar 가격 추적기"
+  }
+}

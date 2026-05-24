@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Encar 가격 추적기</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="popup-body">
+  <div class="popup-header">
+    <h1 class="popup-title">Encar 가격 추적기</h1>
+  </div>
+
+  <div id="popup-content">
+    <div id="loading" class="popup-loading">불러오는 중...</div>
+    <div id="empty" class="popup-empty" style="display:none;">
+      아직 방문한 차량이 없습니다.<br />
+      엔카에서 차량을 둘러보세요.
+    </div>
+    <ul id="vehicle-list" class="vehicle-list" style="display:none;"></ul>
+  </div>
+
+  <script src="utils/constants.js"></script>
+  <script src="utils/price.js"></script>
+  <script src="utils/status.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
